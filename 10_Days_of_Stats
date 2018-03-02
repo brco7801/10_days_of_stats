@@ -1,3 +1,5 @@
+# Day 0 - Q1
+
 con <- file('stdin', open='r')
 inputs <- readLines(con)
 N <- as.numeric(unlist(strsplit(inputs[1], " ")))
@@ -14,3 +16,17 @@ median <- median(X)
 mode <- mode(X)
 
 cat(mean,median,mode, sep="\n")
+
+
+
+
+# Day 0 - Q2
+
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+
+top <- as.numeric(unlist(strsplit(inputs[2], " ")))
+dem <- as.numeric(unlist(strsplit(inputs[3], " ")))
+
+answer <- sum(top * dem)/sum(dem)
+cat(format(round(answer, 1), nsmall=1))
