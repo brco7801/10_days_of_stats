@@ -1,0 +1,16 @@
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+N <- as.numeric(unlist(strsplit(inputs[1], " ")))
+X <- as.numeric(unlist(strsplit(inputs[2], " ")))
+
+mode <- function(X) {
+   X <- sort(X)
+   uniqv <- unique(X)
+   uniqv[which.max(tabulate(match(X, uniqv)))]
+}
+
+mean <- sum(X)/N
+median <- median(X)
+mode <- mode(X)
+
+cat(mean,median,mode, sep="\n")
