@@ -1,4 +1,4 @@
-# Day 0 - Q1
+# Day 0 - Mean, Median, Mode
 
 con <- file('stdin', open='r')
 inputs <- readLines(con)
@@ -20,7 +20,7 @@ cat(mean,median,mode, sep="\n")
 
 
 
-# Day 0 - Q2
+# Day 0 - Weighted Mean
 
 con <- file('stdin', open='r')
 inputs <- readLines(con)
