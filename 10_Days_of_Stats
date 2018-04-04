@@ -17,8 +17,7 @@ mode <- mode(X)
 
 cat(mean,median,mode, sep="\n")
 
-
-
+########################################
 
 # Day 0 - Weighted Mean
 
@@ -30,3 +29,22 @@ dem <- as.numeric(unlist(strsplit(inputs[3], " ")))
 
 answer <- sum(top * dem)/sum(dem)
 cat(format(round(answer, 1), nsmall=1))
+
+########################################
+
+# Day 1 - Quartiles
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+n <- inputs[[1]]
+elements <- inputs[[2]]
+
+n <- as.numeric(unlist(strsplit(n, " ")))
+elements <- sort(as.numeric(unlist(strsplit(elements, " "))))
+q1 <- (elements[2] + elements[3]) / 2
+q2 <- median(elements)
+q3 <- (elements[7] + elements[8]) / 2
+
+cat (q1, q2, q3, sep="\n")
+
+########################################
+
