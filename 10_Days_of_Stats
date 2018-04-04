@@ -93,3 +93,24 @@ return (o)
 
 q <- format(round(quart(total), 1), nsmall=1)
 cat (q)
+
+########################################
+
+# Day 1 - Standard Deviation
+
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+n <- inputs[[1]]
+elements <- inputs[[2]]
+
+data <- as.numeric(unlist(strsplit(elements, " ")))
+
+std <- function(v){
+    return (sd(v) * sqrt((length(v)-1)/length(v)))
+}
+
+cat(format(round(std(data), 1), nsmall=1))
+
+########################################
+
+
