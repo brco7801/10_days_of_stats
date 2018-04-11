@@ -126,6 +126,20 @@ cat(round(answer, 3))
 
 # Day 4 - Binomial Distribution II
 
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+N <- as.numeric(unlist(strsplit(inputs[1], " ")))
+p <- N[1]/100
+n <- N[2]
+
+A1 <- round(pbinom(2,n,p),3)
+A2 <- round(1 - pbinom(1,n,p), 3)
+cat(A1,A2,sep="\n")
+
+########################################
+
+# Day 4 - Geometric Distribution I
+
 
 
 
