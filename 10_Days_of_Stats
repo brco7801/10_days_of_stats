@@ -113,4 +113,19 @@ cat(format(round(std(data), 1), nsmall=1))
 
 ########################################
 
+# Day 4 - Binomial Distribution I
+
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+N <- as.numeric(unlist(strsplit(inputs[1], " ")))
+p <- N[1] / (N[1] + N[2])
+answer <- 1 - pbinom(2,6,p)
+cat(round(answer, 3))
+
+########################################
+
+# Day 4 - Binomial Distribution II
+
+
+
 
