@@ -1,1 +1,31 @@
+########################################
+
+# Day 5 - Poisson Distribution I
+
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+mean <- as.numeric(unlist(strsplit(inputs[1], " ")))
+x <- as.numeric(unlist(strsplit(inputs[2], " ")))
+
+ans <- dpois(x,mean)
+cat(ans)
+
+########################################
+
+# Day 5 - Poisson Distribution II
+
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+means <- as.numeric(unlist(strsplit(inputs[1], " ")))
+X <- means[1]
+Y <- means[2]
+
+A <- 160+40*(X+X^2)
+B <- 128+40*(Y+Y^2)
+
+cat(A,B,sep="\n")
+
+########################################
+
+# Day 5 - Poisson Distribution II
 
