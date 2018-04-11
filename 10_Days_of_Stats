@@ -140,6 +140,26 @@ cat(A1,A2,sep="\n")
 
 # Day 4 - Geometric Distribution I
 
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+Prop <- as.numeric(unlist(strsplit(inputs[1], " ")))
+n <- as.numeric(unlist(strsplit(inputs[2], " ")))
+p <- Prop[1]/Prop[2]
 
+ans <- round(dgeom(n-1,p),3)
+cat(ans)
+
+########################################
+
+# Day 4 - Geometric Distribution II
+
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+Prop <- as.numeric(unlist(strsplit(inputs[1], " ")))
+n <- as.numeric(unlist(strsplit(inputs[2], " ")))
+p <- Prop[1]/Prop[2]
+
+ans <- round(pgeom(n-1,p),3)
+cat(ans)
 
 
