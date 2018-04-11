@@ -27,5 +27,34 @@ cat(A,B,sep="\n")
 
 ########################################
 
-# Day 5 - Poisson Distribution II
+# Day 5 - Normal Distribution I
 
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+params <- as.numeric(unlist(strsplit(inputs[1], " ")))
+q1 <- as.numeric(unlist(strsplit(inputs[2], " ")))
+q2 <- as.numeric(unlist(strsplit(inputs[3], " ")))
+
+Q1 <- round(1 - pnorm(19.5,params[1],params[2],lower.tail = FALSE), 3)
+Q2 <- round(pnorm(q2[1],params[1],params[2],lower.tail = FALSE) - pnorm(q2[2],params[1],params[2],lower.tail = FALSE), 3)
+cat(Q1,Q2,sep="\n")
+
+########################################
+
+# Day 5 - Normal Distribution II
+
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+ps <- as.numeric(unlist(strsplit(inputs[1], " ")))
+q1 <- as.numeric(unlist(strsplit(inputs[2], " ")))
+q2 <- as.numeric(unlist(strsplit(inputs[3], " ")))
+
+Q1 <- round(((1 - pnorm(q1,ps[1],ps[2]))*100), 2)
+Q2 <- round((pnorm(q2,ps[1],ps[2],lower.tail = FALSE)*100), 2)
+Q3 <- 100 - Q2
+
+cat(Q1,Q2,Q3,sep="\n")
+
+########################################
+
+# Day 6 - 
