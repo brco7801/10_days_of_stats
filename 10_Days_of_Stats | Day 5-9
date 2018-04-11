@@ -57,4 +57,56 @@ cat(Q1,Q2,Q3,sep="\n")
 
 ########################################
 
-# Day 6 - 
+# Day 6 - The Central Limit Theorem I
+
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+limit <- as.numeric(unlist(strsplit(inputs[1], " ")))
+n <- as.numeric(unlist(strsplit(inputs[2], " ")))
+mean <- as.numeric(unlist(strsplit(inputs[3], " ")))
+sd <- as.numeric(unlist(strsplit(inputs[4], " ")))
+
+mu <- n * mean
+std <- (n^.5) * sd
+ans <- round(pnorm(limit,mu,std), 4)
+
+cat(ans)
+
+########################################
+
+# Day 6 - The Central Limit Theorem II
+
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+limit <- as.numeric(unlist(strsplit(inputs[1], " ")))
+n <- as.numeric(unlist(strsplit(inputs[2], " ")))
+mean <- as.numeric(unlist(strsplit(inputs[3], " ")))
+sd <- as.numeric(unlist(strsplit(inputs[4], " ")))
+
+mu <- n * mean
+std <- (n^.5) * sd
+ans <- round(pnorm(limit,mu,std), 4)
+cat(ans)
+
+########################################
+
+# Day 6 - The Central Limit Theorem III
+
+con <- file('stdin', open='r')
+inputs <- readLines(con)
+n <- as.numeric(unlist(strsplit(inputs[1], " ")))
+mean <- as.numeric(unlist(strsplit(inputs[2], " ")))
+sd <- as.numeric(unlist(strsplit(inputs[3], " ")))
+mid <- as.numeric(unlist(strsplit(inputs[4], " ")))
+z <- as.numeric(unlist(strsplit(inputs[5], " ")))
+
+ci <- z * (sd/(n^.5))
+Q2 <- round(mean + ci,2)
+Q1 <- round(mean - ci,2)
+
+cat(Q1,Q2, sep="\n")
+
+########################################
+
+# Day 7 - Pearson Correlation Coefficient I
+
